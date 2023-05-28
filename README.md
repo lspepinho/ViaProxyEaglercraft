@@ -2,7 +2,7 @@
 
 > YOU NEED TO HAVE A VALID MINECRAFT ACCOUNT (Java Or Bedrock), this fork doesn't have any cracked/offline support (and will never have it) for legal reasons.
 
-# ViaProxy With EaglerCraft
+# ViaProxy With Eaglercraft
 Standalone proxy which allows players to join EVERY Minecraft server version (Classic, Alpha, Beta, Release, Bedrock)
 
 To download the latest version, go to the [Releases section](#executable-jar-file) and download the latest version.  
