@@ -2,8 +2,6 @@
 
 > YOU NEED TO HAVE A VALID MINECRAFT ACCOUNT (Java Or Bedrock), this fork doesn't have any cracked/offline support (and will never have it) for legal reasons.
 
-> This App doesn't contain eaglercraftX client
-
 # ViaProxy With EaglerCraft
 Standalone proxy which allows players to join EVERY Minecraft server version (Classic, Alpha, Beta, Release, Bedrock)
 
@@ -24,7 +22,7 @@ For a full user guide go to the [Usage for Players](#usage-for-players-gui) sect
 - Release (1.7.2 - 1.19.4)
 - Bedrock Edition (Needs the [Geyser plugin](https://github.com/RaphiMC/ViaProxyGeyserPlugin))
 - Classic, Alpha, Beta, Release 1.0 - 1.6.4 (Only passthrough)
-- EaglerCraftX, EaglerCraft
+- Eaglercraft (1.5.2 and 1.8.8)
 
 ViaProxy supports joining to any of the listed server version from any of the listed client versions.
 
