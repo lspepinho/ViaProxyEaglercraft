@@ -173,20 +173,6 @@ public class AccountsTab extends AUITab {
         addButtons.setBounds(10, 220, 465, 50);
         addButtons.setLayout(null);
         contentPane.add(addButtons);
-
-        {
-            JButton addOfflineAccountButton = new JButton("Offline Account");
-            addOfflineAccountButton.setBounds(10, 20, 145, 20);
-            addOfflineAccountButton.addActionListener(event -> {
-                String username = JOptionPane.showInputDialog(this.frame, "Enter your offline mode Username:", "Add Offline Account", JOptionPane.PLAIN_MESSAGE);
-                if (username != null && !username.trim().isEmpty()) {
-                    Account account = ViaProxy.saveManager.accountsSave.addAccount(username);
-                    ViaProxy.saveManager.save();
-                    this.addAccount(account);
-                }
-            });
-            addButtons.add(addOfflineAccountButton);
-        }
         {
             this.addMicrosoftAccountButton = new JButton("Microsoft Account");
             this.addMicrosoftAccountButton.setBounds(160, 20, 145, 20);
