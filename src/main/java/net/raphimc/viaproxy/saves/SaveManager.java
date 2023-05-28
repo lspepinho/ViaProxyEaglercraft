@@ -60,7 +60,9 @@ public class SaveManager {
                         final AbstractSave save = field.get();
                         try {
                             if (saveObject.has(save.getName())) {
-                                save.load(saveObject.get(save.getName()));
+                                if (save.getName() != "?") {
+                                    save.load(saveObject.get(save.getName()));
+                                }
                             }
                         } catch (Throwable e) {
                             Logger.LOGGER.error("Failed to load save " + save.getName(), e);

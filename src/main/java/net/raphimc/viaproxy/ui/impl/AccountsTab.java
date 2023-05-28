@@ -175,7 +175,7 @@ public class AccountsTab extends AUITab {
         contentPane.add(addButtons);
         {
             this.addMicrosoftAccountButton = new JButton("Microsoft Account");
-            this.addMicrosoftAccountButton.setBounds(160, 20, 145, 20);
+            this.addMicrosoftAccountButton.setBounds(5, 20, 222, 20);
             this.addMicrosoftAccountButton.addActionListener(event -> {
                 this.addMicrosoftAccountButton.setEnabled(false);
                 this.handleLogin(msaDeviceCodeConsumer -> {
@@ -188,7 +188,7 @@ public class AccountsTab extends AUITab {
         }
         {
             this.addBedrockAccountButton = new JButton("Bedrock Account");
-            this.addBedrockAccountButton.setBounds(310, 20, 145, 20);
+            this.addBedrockAccountButton.setBounds(237, 20, 222, 20);
             this.addBedrockAccountButton.addActionListener(event -> {
                 this.addBedrockAccountButton.setEnabled(false);
                 this.handleLogin(msaDeviceCodeConsumer -> {

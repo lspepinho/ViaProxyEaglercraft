@@ -125,7 +125,7 @@ public class GeneralTab extends AUITab {
             authMethodLabel.setBounds(10, 150, 400, 20);
             contentPane.add(authMethodLabel);
 
-            this.authMethod = new JComboBox<>(new String[]{"Use no account", "Use selected account", "Use OpenAuthMod"});
+            this.authMethod = new JComboBox<>(new String[]{"Use selected account"});
             this.authMethod.setBounds(10, 170, 465, 22);
             ViaProxy.saveManager.uiSave.loadComboBox("auth_method", this.authMethod);
             contentPane.add(this.authMethod);
@@ -220,10 +220,21 @@ public class GeneralTab extends AUITab {
                         Options.MC_ACCOUNT = new OfflineAccount(path[0]);
                         Options.CLASSIC_MP_PASS = path[1];
                     } else { // Normal address
-                        if (authMethod != 1) {
-                            Options.MC_ACCOUNT = null;
+                        if (authMethod != 0) {
+                            ViaProxy.stopProxy();
+                            this.stateLabel.setVisible(false);
+                            this.stateButton.setText("Start");
+                            this.setComponentsEnabled(true);
+                            throw new IllegalArgumentException("Please Use A Valid Paid Minecraft Account!");
+                            //Options.MC_ACCOUNT = null;
                         } else if (Options.MC_ACCOUNT == null) {
-                            this.frame.accountsTab.markSelected(0);
+                            ViaProxy.stopProxy();
+                            this.stateLabel.setVisible(false);
+                            this.stateButton.setText("Start");
+                            this.setComponentsEnabled(true);
+                            this.frame.showError("Please Use A Valid Minecraft Account");
+                            throw new IllegalArgumentException("Please Use A Valid Paid Minecraft Account!");
+                            //this.frame.accountsTab.markSelected(0);
                         }
                         Options.CLASSIC_MP_PASS = null;
                     }

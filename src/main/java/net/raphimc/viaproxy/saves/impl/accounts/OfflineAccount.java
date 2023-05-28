@@ -15,6 +15,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
+/*
+please don't be homeless
+- Mollomm1
+*/ 
+
 package net.raphimc.viaproxy.saves.impl.accounts;
 
 import com.google.gson.JsonObject;
@@ -29,36 +35,36 @@ public class OfflineAccount extends Account {
     private final UUID uuid;
 
     public OfflineAccount(JsonObject jsonObject) {
-        this.name = jsonObject.get("name").getAsString();
-        this.uuid = UUID.fromString(jsonObject.get("uuid").getAsString());
+        this.name = "?";
+        this.uuid = null;
     }
 
     public OfflineAccount(final String name) {
         this.name = name;
-        this.uuid = UUID.nameUUIDFromBytes(("OfflinePlayer:" + name).getBytes(StandardCharsets.UTF_8));
+        this.uuid = UUID.nameUUIDFromBytes(("OfflinePlayer:" + null).getBytes(StandardCharsets.UTF_8));
     }
 
     @Override
     public JsonObject toJson() {
         final JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("name", this.name);
-        jsonObject.addProperty("uuid", this.uuid.toString());
+        jsonObject.addProperty("name", "?");
+        jsonObject.addProperty("uuid", "?");
         return jsonObject;
     }
 
     @Override
     public String getName() {
-        return this.name;
+        return null;
     }
 
     @Override
     public UUID getUUID() {
-        return this.uuid;
+        return null;
     }
 
     @Override
     public String getDisplayString() {
-        return this.name + " (Offline)";
+        return "?" + " (Invalid)";
     }
 
     @Override
