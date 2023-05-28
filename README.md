@@ -1,4 +1,4 @@
-> Implementation of Eaglercraft of ViaProxy, that mean you can play ANY Minecraft servers from any versions and even bedrock servers in a web browser!
+> Implementation of Eaglercraft for ViaProxy, that mean you can play ANY Minecraft servers from any versions and even bedrock servers in a web browser!
 
 > YOU NEED TO HAVE A VALID MINECRAFT ACCOUNT (Java Or Bedrock), this fork doesn't have any cracked/offline support (and will never have it) for legal reasons.
 
