@@ -232,7 +232,6 @@ public class GeneralTab extends AUITab {
                             this.stateLabel.setVisible(false);
                             this.stateButton.setText("Start");
                             this.setComponentsEnabled(true);
-                            this.frame.showError("Please Use A Valid Minecraft Account");
                             throw new IllegalArgumentException("Please Use A Valid Paid Minecraft Account!");
                             //this.frame.accountsTab.markSelected(0);
                         }

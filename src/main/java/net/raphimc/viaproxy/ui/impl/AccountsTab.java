@@ -64,25 +64,6 @@ public class AccountsTab extends AUITab {
             contentPane.add(info2Label);
         }
         {
-            JLabel infoLabel = new JLabel("<html>If you change your account frequently, you can install <a href=\"\">OpenAuthMod</a> on your</html>");
-            infoLabel.setBounds(10, 60, 500, 20);
-            contentPane.add(infoLabel);
-
-            JLabel infoLabel2 = new JLabel("client. This allows ViaProxy to use the account you are logged in with on the client.");
-            infoLabel2.setBounds(10, 80, 500, 20);
-            contentPane.add(infoLabel2);
-
-            JLabel clickRect = new JLabel();
-            clickRect.setBounds(305, 60, 90, 24);
-            clickRect.addMouseListener(new MouseAdapter() {
-                @Override
-                public void mouseReleased(MouseEvent e) {
-                    frame.openURL("https://github.com/RaphiMC/OpenAuthMod/");
-                }
-            });
-            contentPane.add(clickRect);
-        }
-        {
             JScrollPane scrollPane = new JScrollPane();
             scrollPane.setBounds(10, 105, 465, 110);
             contentPane.add(scrollPane);
